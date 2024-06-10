@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/main.js",
+        "use": "@vercel/node",
+        "config": {
+          "distDir": "www"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/www/$1"
+      }
+    ]
+  }
+  
