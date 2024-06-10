@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Game</title>
+    <!-- Kaboom.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/kaboom@0.6.0"></script>
+    <!-- Link your CSS files if you have any -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* You can include any additional CSS styles here */
+    </style>
+</head>
+<body>
+    <!-- Container for your game canvas -->
+    <div id="game-container"></div>
+
+    <!-- Game Script -->
+    <script>
+        // Initialize Kaboom.js
+        kaboom({
+            global: true,
+            fullscreen: true,
+            scale: 1,
+            clearColor: [0, 0, 0, 1],
+            debug: true,
+        });
+
+        // Define your game logic
+        loadRoot('assets/');
+        loadSprite('bird', 'bird.png');
+        loadSprite('pipe', 'pipe.png');
+        
+        scene("game", () => {
+            add([
+                sprite("bg"),
+                layer("bg"),
+            ]);
+
+            const bird = add([
+                sprite("bird"),
+                scale(0.5),
+                pos(80, 40),
+                body(),
+            ]);
+
+            // Other game logic goes here
+        });
+
+        // Start the game
+        start("game");
+    </script>
+</body>
+</html>
