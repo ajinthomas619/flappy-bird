@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Folder structure
 
 - `src` - source code for your kaboom project
@@ -25,3 +26,6 @@ $ npm run bundle
 ```
 
 will build your game and package into a .zip file, you can upload to your server or itch.io / newground etc.
+=======
+# flappy-bird
+>>>>>>> 9bf8ef75f4b1d62d876b55691312beb17a3acfe5
